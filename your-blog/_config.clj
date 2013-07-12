@@ -14,15 +14,14 @@
  :url-base     "/"
 
  ;; dev server port
- ;;   default value: 8080
- :port 80
+ :port (System/getenv "PORT")
 
  ;; site language
  ;;   default value: "en"
  :lang "en"
 
  ;; default site data
- :site {:atom-base  "http://localhost:8080" ; please change "localhost:8080" to your blog domain
+ :site {:atom-base  (System/getenv "DOMAIN")
         :charset    "utf-8"
         :site-title "misaki demo page"
         :twitter    "uochan"
