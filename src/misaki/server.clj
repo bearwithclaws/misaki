@@ -95,10 +95,10 @@
         (start-watcher (:template-dir *config*))
         (println " * starting server: "
                  (cyan (str "http://localhost:"
-                            (:port *config*)
+                            (Integer/parseInt (System/getenv "PORT"))
                             (:url-base *config*))))
         (run-jetty
           (routes (files (:url-base *config*)
                          {:root (:public-dir *config*)}))
-          {:port (System/getenv "PORT")})))))
+          {:port (Integer/parseInt (System/getenv "PORT"))})))))
 
