@@ -100,5 +100,5 @@
         (run-jetty
           (routes (files (:url-base *config*)
                          {:root (:public-dir *config*)}))
-          {:port (:port *config*)})))))
+          {:port (System/getenv "PORT")})))))
 
