@@ -31,4 +31,6 @@
           :src-linenum-anchor-prefix "L"
           :output-dir "doc/public/api"}
 
+  :min-lein-version "2.0.0"
+
   :main misaki.server)
